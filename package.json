@@ -1,0 +1,24 @@
+{
+  "name": "email-scheduler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sauravsuman0199/Email-Scheduler.git"
+  },
+  "author": "Saurav Suman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sauravsuman0199/Email-Scheduler/issues"
+  },
+  "homepage": "https://github.com/sauravsuman0199/Email-Scheduler#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3",
+    "node-mailer": "^0.1.1"
+  }
+}
