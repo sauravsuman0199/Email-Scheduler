@@ -1,4 +1,1 @@
-.env
-node_modules
-config/credentials.js
-
+node_modules/
