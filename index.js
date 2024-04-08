@@ -2,12 +2,21 @@ const express = require('express')
 const app = express()
 const scheduler = require('node-cron');
 const {USER,PASS} = require('./config/credentials')
+const {transporter,options} = require("./services/email");
+
 
 
 const PORT = 1337;
 
 scheduler.schedule("* * * * * ",()=>{
-    console.log('inside scheduler');
+    console.log('Sending Email');
+    console.log({USER,PASS});
+    transporter.sendMail(options,(err,info)=>{
+        if(err){
+        console.log(err);
+        }
+        console.log("Email send with info =", info)
+    })
 })
 
 app.listen(PORT,()=>{
