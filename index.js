@@ -8,9 +8,9 @@ const {transporter,options} = require("./services/email");
 
 const PORT = 1337;
 
-scheduler.schedule("* * * * * ",()=>{
+scheduler.schedule("* * * * *",()=>{
     console.log('Sending Email');
-    console.log({USER,PASS});
+    // console.log({USER,PASS});
     transporter.sendMail(options,(err,info)=>{
         if(err){
         console.log(err);
