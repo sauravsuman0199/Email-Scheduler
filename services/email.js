@@ -1,9 +1,9 @@
 const nodemailer = require('nodemailer');
-const {USER,PASS} = require('../config/credentials');
+const {USER_EMAIL,SECRET_PASS} = require('../config/credentials');
 const SMTP_PORT = 587;
 const HOST_SERVICE = 'smtp-relay.brevo.com';
-SENDER_EMAIL = 'sauravsuman0199@gmail.com';
-RECEIVER_EMAIL = "saurav.ksit@gmail.com";
+const SENDER_EMAIL = 'sauravsuman0199@gmail.com';
+const RECEIVER_EMAIL = "saurav.ksit@gmail.com";
 const CC = [];
 const BCC = [];
 const EMAIL_SUBJECT = "HELLO form Saurav"
@@ -21,13 +21,9 @@ const transporter = nodemailer.createTransport({
     port:SMTP_PORT,
     secure:false,
     auth:{
-        user:USER,
-        pass: PASS
+        user:USER_EMAIL,
+        pass: SECRET_PASS
     }
-    ,
-    tls: {
-        rejectUnauthorized: false
-    },
-    debug:true
+    
 })
 module.exports = {transporter,options}
